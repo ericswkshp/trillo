@@ -90,8 +90,10 @@
               </a>
             </li>
           </ul>
-
-          <div class="legal">&copy; 2017 by Trillo. All rights reserved</div>
+          <div class="legal">
+            &copy; <span id="copyrightDate"></span> by Trillo. All rights
+            reserved
+          </div>
         </nav>
         <main class="hotel-view">
           <div class="gallery">
@@ -253,5 +255,10 @@
         </main>
       </div>
     </div>
+    <script>
+      var dateValue = new Date();
+      var year = dateValue.getFullYear();
+      document.getElementById("copyrightDate").innerHTML = year;
+    </script>
   </body>
 </html>
